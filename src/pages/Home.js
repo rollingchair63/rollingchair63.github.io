@@ -20,6 +20,14 @@ export default function Home() {
                                 especially through websites and games. I'm passionate about how interactive design can bring people joy, much like the video games I love.
                                 <br /><br /> In my spare time I'm usually
                                 on a long night walk hunting for Pikmin or in Hyrule searching for Korok seeds :)
+                                <br /><br /> Feel free to connect with me on
+                                <a href="https://www.linkedin.com/in/elodieyyx" target="_blank" rel="noopener noreferrer" className="mx-1 text-link">
+                                    LinkedIn 💬
+                                </a>
+                                or view more of my work on
+                                <a href="https://github.com/rollingchair63" target="_blank" rel="noopener noreferrer" className="mx-1 text-link">
+                                    GitHub 🛠
+                                </a>!
                             </p>
                         </Col>
                     </Row>
@@ -64,9 +72,9 @@ export default function Home() {
                         <Col md={7}>
                             <h4 className="mb-2">Surgipedia</h4>
                             <p>
-                            A speech-to-text and image-to-text mockup designed for surgical researchers 
-                            to efficiently transcribe audio and visual data into structured outputs. 
-                            Built for the NUS Health Hack 2025, Surgipedia helps clinicians convert complex surgical media into usable insights.
+                                A speech-to-text and image-to-text mockup designed for surgical researchers
+                                to efficiently transcribe audio and visual data into structured outputs.
+                                Built for the NUS Health Hack 2025, Surgipedia helps clinicians convert complex surgical media into usable insights.
                             </p>
                             <div className="skills">
                                 <span className="capsule">Figma</span>

@@ -113,7 +113,18 @@ nav.navbar .nav-link.navbar-link,
   color: #949366;
 }
 
-/* ——— Side Social Bar ——— */
+/* Inline Links for LinkedIn and Github */
+.text-link {
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.text-link:hover {
+  color: #0077b6; /* or your portfolio accent color */
+}
+
+/* ——— Side Social Bar ——— commented out bc i moved it to inline links ABOVE
 .side-social {
   position: fixed;
   top: 50%;
@@ -135,7 +146,7 @@ nav.navbar .nav-link.navbar-link,
   transition: background-color 0.3s;
 }
 .side-social a:hover   { background-color: #FDFD96; }
-.side-social a img     { width: 60%; }
+.side-social a img     { width: 60%; } */
 
 /* remove default link underlines in the nav */
 .top-nav .navbar-link,
