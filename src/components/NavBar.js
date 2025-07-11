@@ -23,16 +23,6 @@ export const NavBar = () => {
 
     return (
         <>
-            {/* side icons */}
-            <div className="side-social">
-                <a href="https://linkedin.com/in/elodieyyx" aria-label="LinkedIn">
-                    <img src={navIcon1} alt="LinkedIn" />
-                </a>
-                <a href="https://github.com/rollingchair63" aria-label="GitHub">
-                    <img src={navIcon2} alt="GitHub" />
-                </a>
-            </div>
-
             {/* main navbar */}
             <Navbar
                 expand="lg"
