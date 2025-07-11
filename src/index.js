@@ -1,6 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
-// import {createRoot} from 'react-dom/client';
+// import ReactDOM from "react-dom";
+import {createRoot} from 'react-dom/client';
 import { HashRouter as Router } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -16,7 +16,7 @@ import './index.css';
 // );
 
 const container = document.getElementById('root');
-const root = ReactDOM.createRoot(container);
+const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Router>
