@@ -121,10 +121,11 @@ nav.navbar .nav-link.navbar-link,
   text-decoration: underline;
   font-weight: 500;
   transition: color 0.2s ease;
+  color: #6a8a7b;
 }
 
 .text-link:hover {
-  color: #0077b6; /* or your portfolio accent color */
+  color: #6a8a7b; /* or your portfolio accent color */
 }
 
 /* remove default link underlines in the nav */
@@ -164,7 +165,7 @@ nav.navbar .nav-link.navbar-link,
   margin-bottom: 20px;
 }
 .banner p {
-  color: #B8B8B8;
+  color: #949386;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5;
@@ -218,21 +219,24 @@ nav.navbar .nav-link.navbar-link,
   margin-bottom: 1rem; /* give breathing room under the title */
 }
 
-/* Remove auto-numbering and underline */
-/* .section-title::before { content: "01."; … } */
-/* .section-title::after  { content: ""; … } */
-
 .section-text {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: #B8B8B8;
+  color: #949386;
+}
+
+.projects-section p {
+  color: #949386;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 /* Paragraph / bio text */
 .section-description {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: #949366;
+  color: #949386;
   margin-top: 1.5rem;
 }
 

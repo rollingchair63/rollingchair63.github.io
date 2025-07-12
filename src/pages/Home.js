@@ -66,7 +66,7 @@ export default function Home() {
                                 src={project1Img} // replace with actual path or use import (use png if cannot)
                                 alt="Surgipedia App"
                                 className="img-fluid rounded shadow"
-                                style={{ maxWidth: '100%', width: '300px' }} // ← set width here
+                                style={{ maxWidth: '100%', width: '220px' }} // ← set width here
                             />
                         </Col>
                         <Col md={7}>
@@ -92,6 +92,7 @@ export default function Home() {
                                 src="/images/project2.jpg" // replace with actual path or use import
                                 alt="Portfolio Website"
                                 className="img-fluid rounded shadow"
+                                style={{ maxWidth: '100%', width: '220px' }}
                             />
                         </Col>
                         <Col md={7}>

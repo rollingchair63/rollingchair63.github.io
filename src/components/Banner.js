@@ -19,13 +19,13 @@ export const Banner = () => {
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <h1 className="hero-text">
-                            Hello!
+                            hello!
                         </h1>
                         <p
                             className="hero-text"
                             style={{ transitionDelay: "0.3s" }}
                         >
-                            Lorem Ipsum is simply dummy text...
+                            welcome :D
                         </p>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
