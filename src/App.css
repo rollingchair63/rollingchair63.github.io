@@ -64,6 +64,9 @@ nav.navbar.scrolled {
   background-color: #F2FEDC;
 }
 
+/* Account for mobile version of Navbar */
+
+
 /* Brand */
 nav.navbar .navbar-brand,
 .top-nav .logo {
@@ -140,7 +143,9 @@ nav.navbar .nav-link.navbar-link,
 .banner {
   margin-top: 0;
   padding: 40px 0 100px;
+  position: relative;
 }
+
 .banner .tagline {
   display: inline-block;
   font-weight: 700;
@@ -270,4 +275,27 @@ nav.navbar .nav-link.navbar-link,
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
+}
+
+/* ——— Responsive Mobile Nav (Centered in Viewport) ——— */
+/* ——— Mobile Nav: Centered within Banner Only ——— */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-link,
+  .resume-btn {
+    display: inline-block;
+    width: fit-content;
+  }
+
+  .resume-btn {
+    margin-left: 0;
+    text-align: center;
+  }
 }
