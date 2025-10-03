@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
-import logo from '../logo.svg';
+import logo from '../../logo.svg';
+import "./NavBar.css";
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('');

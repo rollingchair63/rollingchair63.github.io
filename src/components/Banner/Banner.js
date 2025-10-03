@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../../assets/img/header-img.svg";
+import "./Banner.css";
 
-export const Banner = () => {
+export default function Banner() {
     const [isLoaded, setIsLoaded] = useState(false);
 
     // trigger the loaded class as soon as we mount

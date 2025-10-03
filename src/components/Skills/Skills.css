@@ -1,0 +1,32 @@
+/* Skills Section */
+.skills-section {
+  padding: 2rem 0;
+  text-align: center;
+
+}
+
+.skills-section h2 {
+  color: #949366;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* Skills Capsules */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.capsule {
+  background-color: #949366;
+  color: #ffffff;
+  padding: 0.4em 0.8em;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-block;
+}

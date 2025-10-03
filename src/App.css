@@ -45,7 +45,7 @@ p.success { color: #F2FEDC; }
 p.danger  { color: #FDFD96; }
 
 /* ——— Top Navbar ——— */
-nav.navbar,
+/* nav.navbar,
 .top-nav {
   background-color: #F2FEDC;
   position: fixed;
@@ -62,22 +62,22 @@ nav.navbar,
 
 nav.navbar.scrolled {
   background-color: #F2FEDC;
-}
+} */
 
 /* Account for mobile version of Navbar */
 
 
 /* Brand */
-nav.navbar .navbar-brand,
+/* nav.navbar .navbar-brand,
 .top-nav .logo {
   font-family: 'Centra', sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
   color: #949366;
-}
+} */
 
 /* Nav Links */
-nav.navbar .nav-link.navbar-link,
+/* nav.navbar .nav-link.navbar-link,
 .top-nav .navbar-link {
   color: #949366;
   font-weight: 400;
@@ -86,18 +86,18 @@ nav.navbar .nav-link.navbar-link,
   padding: 0 25px;
   opacity: 0.75;
   transition: color 0.3s, opacity 0.3s, font-weight 0.3s;
-}
+} */
 
 /* hover & active: olive + bold */
-.top-nav .navbar-link:hover,
+/* .top-nav .navbar-link:hover,
 .top-nav .navbar-link.active {
   color: #949366;
   font-weight: 700 !important;
   opacity: 1;
-}
+} */
 
 /* Resume Button */
-.navbar-text button,
+/* .navbar-text button,
 .resume-btn {
   font-weight: 700;
   background-color: #949366;
@@ -114,7 +114,7 @@ nav.navbar .nav-link.navbar-link,
 .resume-btn:hover {
   background-color: #FBFAF0;
   color: #949366;
-}
+} */
 
 /* Inline Links for LinkedIn and Github */
 .text-link {
@@ -129,7 +129,7 @@ nav.navbar .nav-link.navbar-link,
 }
 
 /* remove default link underlines in the nav */
-.top-nav .navbar-link,
+/* .top-nav .navbar-link,
 .top-nav .navbar-brand,
 .resume-btn {
   text-decoration: none !important;
@@ -138,10 +138,10 @@ nav.navbar .nav-link.navbar-link,
 .top-nav .navbar-brand:hover,
 .resume-btn:hover {
   text-decoration: none !important;
-}
+} */
 
 /* Banner */
-.banner {
+/* .banner {
   margin-top: 0;
   padding: 40px 0 100px;
   position: relative;
@@ -182,10 +182,10 @@ nav.navbar .nav-link.navbar-link,
 }
 .banner button svg { margin-left: 10px; transition: margin 0.3s; }
 .banner button:hover svg { margin-left: 25px; }
-.banner img { animation: updown 3s linear infinite; }
+.banner img { animation: updown 3s linear infinite; } */
 
 /* Fade-in state */
-.banner .hero-text,
+/* .banner .hero-text,
 .banner .hero-img {
   opacity: 0;
   transform: translateY(20px);
@@ -198,16 +198,16 @@ nav.navbar .nav-link.navbar-link,
   0%   { transform: translateY(-20px); }
   50%  { transform: translateY(20px); }
   100% { transform: translateY(-20px); }
-}
+} */
 
 /* Text Rotate Cursor */
 .txt-rotate > .wrap { border-right: 0.08em solid #666; }
 
 /* ——— About Section ——— */
-.about-section {
+/* .about-section {
   background-color: #FBFAF0;
-  margin-bottom: 4rem;  /* extra spacing before next section */
-}
+  margin-bottom: 4rem;
+} */
 
 /* Title styling */
 .section-title {
@@ -225,12 +225,12 @@ nav.navbar .nav-link.navbar-link,
   color: #949386;
 }
 
-.projects-section p {
+/* .projects-section p {
   color: #949386;
   font-size: 1.125rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-}
+} */
 
 /* Paragraph / bio text */
 .section-description {
@@ -241,7 +241,7 @@ nav.navbar .nav-link.navbar-link,
 }
 
 /* Skills Capsules */
-.skills {
+/* .skills {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -249,14 +249,14 @@ nav.navbar .nav-link.navbar-link,
 }
 
 .capsule {
-  background-color: #949366; /* You can change this */
+  background-color: #949366;
   color: #ffffff;
   padding: 0.4em 0.8em;
   border-radius: 999px;
   font-size: 0.875rem;
   font-weight: 500;
   display: inline-block;
-}
+} */
 
 
 /* App Helpers */
@@ -283,7 +283,7 @@ nav.navbar .nav-link.navbar-link,
 
 /* Resume Preview */
 
-.resume-wrapper {
+/* .resume-wrapper {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
@@ -327,7 +327,7 @@ nav.navbar .nav-link.navbar-link,
   .resume-preview {
     height: 350px;
   }
-}
+} */
 
 /* ——— Responsive Mobile Nav (Centered in Viewport) ——— */
 /* ——— Mobile Nav: Centered within Banner Only ——— */

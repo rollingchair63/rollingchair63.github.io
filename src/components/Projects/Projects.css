@@ -1,0 +1,24 @@
+/* Skills Capsules in Projects */
+.projects-section .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.projects-section .capsule {
+  background-color: #949366;
+  color: #ffffff;
+  padding: 0.4em 0.8em;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.projects-section p {
+  color: #949386;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
