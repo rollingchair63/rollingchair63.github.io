@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import { NavBar } from './components/NavBar/NavBar';
 import Home from './pages/Home/Home';
 import Resume from './pages/Resume/Resume';
+import CaptchaDemo from './pages/Captcha/Demo';
 
 function App() {
   return (
