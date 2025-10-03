@@ -74,7 +74,7 @@ export const NavBar = () => {
                         <Nav className="ms-auto align-items-center">
                             <Nav.Link
                                 as={HashLink}
-                                to="#about"
+                                to="/#about"
                                 smooth
                                 className={`navbar-link${activeLink === "about" ? " active" : ""}`}
                                 onClick={() => {
@@ -87,7 +87,7 @@ export const NavBar = () => {
 
                             <Nav.Link
                                 as={HashLink}
-                                to="#skills"
+                                to="/#skills"
                                 smooth
                                 className={`navbar-link${activeLink === "skills" ? " active" : ""}`}
                                 onClick={() => {
@@ -100,7 +100,7 @@ export const NavBar = () => {
 
                             <Nav.Link
                                 as={HashLink}
-                                to="#projects"
+                                to="/#projects"
                                 smooth
                                 className={`navbar-link${activeLink === "projects" ? " active" : ""}`}
                                 onClick={() => {
