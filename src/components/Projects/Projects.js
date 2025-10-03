@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import project1Img from '../../assets/img/project1.jpg';
 import "./Projects.css";
 
@@ -52,7 +53,32 @@ export default function Projects() {
             </p>
             <div className="skills">
               <span className="capsule">React</span>
-              <span className="capsule">Bootstrap</span>
+              <span className="capsule">JavaScript</span>
+              <span className="capsule">CSS</span>
+            </div>
+          </Col>
+        </Row>
+        {/* Project 3 */}
+        <Row className="mb-5 align-items-center text-start">
+          <Col md={5}>
+            <img
+              src="/images/project3.jpg"
+              alt="Captcha Demo"
+              className="img-fluid rounded shadow"
+              style={{ maxWidth: '100%', width: '300px' }}
+            />
+          </Col>
+          <Col md={7}>
+            <h4 className="mb-3"> Captcha Demo</h4>
+            <p>
+              A simple captcha demo built with React, allowing users to select images based on categories.
+            </p>
+            <Link to="/captcha-demo" className="demo-btn">
+              Try Demo →
+            </Link>
+            <div className="skills">
+              <span className="capsule">React</span>
+              <span className="capsule">JavaScript</span>
               <span className="capsule">CSS</span>
             </div>
           </Col>

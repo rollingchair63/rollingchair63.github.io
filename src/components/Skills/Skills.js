@@ -9,7 +9,7 @@ export default function Skills() {
 
   return (
     // id helps the navbar to navigate to the section
-    <section id="skills" className="skills-section">
+    <section id="skills" className="skills-section py-5">
       <h2>Skills</h2>
       <div className="skills">
         {skills.map((skill, index) => (
