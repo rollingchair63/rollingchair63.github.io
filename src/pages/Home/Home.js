@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Banner from '../../components/Banner/Banner';
 import Skills from '../../components/Skills/Skills';
 import Projects from '../../components/Projects/Projects';
-import project1Img from '../../assets/img/project1.jpg';
+// import project1Img from '../../assets/img/project1.jpg';
+import { useLocation } from 'react-router-dom'
 import "./Home.css";
 
 export default function Home() {
+    const location = useLocation();
+
+    useEffect(() => {
+        // Scroll to hash anchor after page loads
+        if (location.hash) {
+            setTimeout(() => {
+                const element = document.querySelector(location.hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    }, [location]);
+
     return (
         <>
             <Banner />

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from '../../logo.svg';
 import "./NavBar.css";
 
@@ -9,6 +9,7 @@ export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('');
     const [scrolled, setScrolled] = useState(false);
     const [expanded, setExpanded] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,7 +19,7 @@ export const NavBar = () => {
           const skillsSection = document.getElementById('skills');
           const projectsSection = document.getElementById('projects');
       
-          const offset = 200; // tweak this as needed to detect when a section is "in view"
+          const offset = 200;
       
           if (projectsSection && scrollPosition >= projectsSection.offsetTop - offset) {
             setActiveLink('projects');
@@ -27,7 +28,7 @@ export const NavBar = () => {
           } else if (aboutSection && scrollPosition >= aboutSection.offsetTop - offset) {
             setActiveLink('about');
           } else {
-            setActiveLink(''); // nothing active at the top
+            setActiveLink('');
           }
       
           setScrolled(scrollPosition > 50);
@@ -41,9 +42,11 @@ export const NavBar = () => {
         setActiveLink(value);
     };
 
+    // Check if we're on the home page
+    const isHomePage = location.pathname === '/';
+
     return (
         <>
-            {/* main navbar */}
             <Navbar
                 expand="lg"
                 fixed="top"
@@ -52,7 +55,6 @@ export const NavBar = () => {
                 className={`top-nav${scrolled ? " scrolled" : ""}`}
             >
                 <Container>
-                    {/* brand/logo */}
                     <Navbar.Brand
                         as={HashLink}
                         to="/#"
@@ -73,9 +75,9 @@ export const NavBar = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto align-items-center">
                             <Nav.Link
-                                as={HashLink}
+                                as={isHomePage ? HashLink : Link}
                                 to="/#about"
-                                smooth
+                                smooth={isHomePage}
                                 className={`navbar-link${activeLink === "about" ? " active" : ""}`}
                                 onClick={() => {
                                     onUpdateActiveLink("about");
@@ -86,9 +88,9 @@ export const NavBar = () => {
                             </Nav.Link>
 
                             <Nav.Link
-                                as={HashLink}
+                                as={isHomePage ? HashLink : Link}
                                 to="/#skills"
-                                smooth
+                                smooth={isHomePage}
                                 className={`navbar-link${activeLink === "skills" ? " active" : ""}`}
                                 onClick={() => {
                                     onUpdateActiveLink("skills");
@@ -99,9 +101,9 @@ export const NavBar = () => {
                             </Nav.Link>
 
                             <Nav.Link
-                                as={HashLink}
+                                as={isHomePage ? HashLink : Link}
                                 to="/#projects"
-                                smooth
+                                smooth={isHomePage}
                                 className={`navbar-link${activeLink === "projects" ? " active" : ""}`}
                                 onClick={() => {
                                     onUpdateActiveLink("projects");
