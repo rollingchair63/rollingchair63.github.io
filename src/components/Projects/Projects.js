@@ -42,11 +42,17 @@ export default function Projects() {
               to efficiently transcribe audio and visual data into structured outputs.
               Surgipedia helps clinicians convert complex surgical media into usable insights.
             </p>
-            <div className="skills">
-              <span className="capsule">Figma</span>
-              <span className="capsule">React</span>
-              <span className="capsule">Tailwind CSS</span>
-              <span className="capsule">Deno</span>
+            <div className="tech-stack">
+              <div className="tech-category">
+                <span className="tech-label">Frontend:</span>
+                <span className="capsule">Figma</span>
+                <span className="capsule">React</span>
+                <span className="capsule">Tailwind CSS</span>
+              </div>
+              <div className="tech-category">
+                <span className="tech-label">Backend:</span>
+                <span className="capsule">Deno</span>
+              </div>
             </div>
           </Col>
         </Row>
@@ -66,10 +72,11 @@ export default function Projects() {
             <p>
               Personal portfolio website showcasing my work and skills, with smooth scrolling, responsive layout, and themed design.
             </p>
-            <div className="skills">
-              <span className="capsule">React</span>
-              <span className="capsule">JavaScript</span>
-              <span className="capsule">CSS</span>
+            <div className="tech-stack">
+              <div className="tech-category">
+                <span className="tech-label">Frontend:</span>
+                <span className="capsule">React</span>
+              </div>
             </div>
           </Col>
         </Row>
@@ -90,10 +97,11 @@ export default function Projects() {
             <Link to="/captcha-demo" className="demo-btn">
               Try Demo →
             </Link>
-            <div className="skills">
-              <span className="capsule">React</span>
-              <span className="capsule">JavaScript</span>
-              <span className="capsule">CSS</span>
+            <div className="tech-stack">
+              <div className="tech-category">
+                <span className="tech-label">Frontend:</span>
+                <span className="capsule">React</span>
+              </div>
             </div>
           </Col>
         </Row>
@@ -112,12 +120,16 @@ export default function Projects() {
               Developed AirQ, a location-based air quality monitoring web app that integrates NASA's TEMPO satellite data with ground measurements and weather information.
               Users can select their location to view real-time pollution levels, receive health recommendations, and track air quality trends through an interactive dashboard.
             </p>
-            <div className="skills">
-              <span className="capsule">React</span>
-              <span className="capsule">JavaScript</span>
-              <span className="capsule">CSS</span>
-              <span className="capsule">Node.js</span>
-              <span className="capsule">SQLite</span>
+            <div className="tech-stack">
+              <div className="tech-category">
+                <span className="tech-label">Frontend:</span>
+                <span className="capsule">React</span>
+              </div>
+              <div className="tech-category">
+                <span className="tech-label">Backend:</span>
+                <span className="capsule">Node.js</span>
+                <span className="capsule">SQLite</span>
+              </div>
             </div>
           </Col>
         </Row>

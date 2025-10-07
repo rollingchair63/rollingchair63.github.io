@@ -4,7 +4,7 @@ import "./Skills.css";
 export default function Skills() {
   const skills = [
     'C', 'SQL', 'Java', 'UI/UX Design', 
-    'Figma', 'JavaScript', 'React', 'Spring Boot',
+    'Figma', 'React', 'Spring Boot',
   ];
 
   return (

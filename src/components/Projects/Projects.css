@@ -43,3 +43,39 @@
   color: #949366;
   text-decoration: none;
 }
+
+/* Enhanced Tech Stack Styling */
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 16px;
+  background-color: rgba(139, 156, 126, 0.08);
+  border-radius: 10px;
+  border-left: 3px solid #8b9c7e;
+}
+
+.tech-category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-label {
+  font-weight: 700;
+  color: #8b9c7e;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 85px;
+  position: relative;
+}
+
+.capsule:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
