@@ -6,7 +6,13 @@ import "./Projects.css";
 
 export default function Projects() {
   // Image arrays for projects with multiple screenshots
-  const project1Img = '/img/project1.jpg';
+  const project1Images = [
+    '/img/project1-1.jpg',
+    '/img/project1-2.jpg',
+    '/img/project1-3.jpg',
+    '/img/project1-4.jpg',
+    '/img/project1-5.jpg'
+  ];
   
   const project3Images = [
     '/img/project3-1.jpg',
@@ -28,11 +34,9 @@ export default function Projects() {
         {/* Project 1 */}
         <Row className="mb-5 align-items-center text-start">
           <Col md={5}>
-            <img
-              src={project1Img}
+            <ImageCarousel 
+              images={project1Images}
               alt="Surgipedia App"
-              className="img-fluid rounded shadow"
-              style={{ maxWidth: '100%', width: '300px' }}
             />
           </Col>
           <Col md={7}>
