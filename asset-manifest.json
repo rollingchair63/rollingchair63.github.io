@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.87b86b08.css",
+    "main.css": "/static/css/main.c6825155.css",
     "main.js": "/static/js/main.fa086744.js",
     "static/media/CentraNo2-Book.ttf": "/static/media/CentraNo2-Book.72c0fe58795586249b47.ttf",
     "static/media/CentraNo2-Medium.ttf": "/static/media/CentraNo2-Medium.54d43c63229859fe26d2.ttf",
     "static/media/CentraNo2-Bold.ttf": "/static/media/CentraNo2-Bold.b61fc644acf0c61b7549.ttf",
     "index.html": "/index.html",
-    "main.87b86b08.css.map": "/static/css/main.87b86b08.css.map",
+    "main.c6825155.css.map": "/static/css/main.c6825155.css.map",
     "main.fa086744.js.map": "/static/js/main.fa086744.js.map"
   },
   "entrypoints": [
-    "static/css/main.87b86b08.css",
+    "static/css/main.c6825155.css",
     "static/js/main.fa086744.js"
   ]
 }
