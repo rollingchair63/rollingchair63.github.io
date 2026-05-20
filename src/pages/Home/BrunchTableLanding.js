@@ -110,15 +110,12 @@ export default function BrunchTableLanding() {
   // ── Drag handlers — attached to the spinner wrapper ─────────────────
   const onPointerDown = useCallback(e => {
     if (activeKey) return;
-    // If the pointer went down on actual dish content, don't start a drag.
-    // Empty space inside the dish hitbox should still spin the table.
-    if (e.target.closest('.brunchDishImg, .brunchDishTag, .brunchDishFallback')) return;
     isDragging.current = true;
     hasMoved.current   = false;
     lastAngle.current  = getPointerAngle(e);
     lastTime.current   = performance.now();
     velRef.current     = 0;
-    e.currentTarget.setPointerCapture(e.pointerId);
+    e.currentTarget.setPointerCapture?.(e.pointerId);
   }, [activeKey]);
 
   const onPointerMove = useCallback(e => {
@@ -136,8 +133,11 @@ export default function BrunchTableLanding() {
     lastTime.current  = now;
   }, []);
 
-  const onPointerUp = useCallback(() => {
+  const onPointerUp = useCallback(e => {
     isDragging.current = false;
+    if (e.currentTarget.hasPointerCapture?.(e.pointerId)) {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    }
   }, []);
 
   // ── Cursor tracking ─────────────────────────────────────────────────
@@ -260,16 +260,11 @@ export default function BrunchTableLanding() {
                   key={item.key}
                   type="button"
                   className={`brunchDish brunchDish--${item.key}${activeKey === item.key ? ' isActive' : ''}`}
-                  // Stop pointerdown here so the spinner's onPointerDown never fires
-                  // for actual food/title presses, while empty hitbox space can still spin
-                  onPointerDown={e => {
-                    if (e.target.closest('.brunchDishImg, .brunchDishTag, .brunchDishFallback')) {
-                      e.stopPropagation();
+                  onClick={() => {
+                    if (hasMoved.current) {
+                      hasMoved.current = false;
+                      return;
                     }
-                  }}
-                  onClick={e => {
-                    if (hasMoved.current) return;
-                    if (!e.target.closest('.brunchDishImg, .brunchDishTag, .brunchDishFallback')) return;
                     handleDishClick(item);
                   }}
                   onPointerEnter={() => setCursorHover(true)}
