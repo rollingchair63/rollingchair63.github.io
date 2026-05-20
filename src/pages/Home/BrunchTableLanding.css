@@ -38,8 +38,8 @@ body.brunch-modal-open {
 
 .brunchRoot {
   position: relative;
-  min-height: 100vh;
-  height: 100vh;
+  min-height: 100svh;
+  height: auto;
   color: var(--brunch-ink);
   overflow: visible;
   background-color: transparent;
@@ -101,7 +101,7 @@ body.brunch-modal-open {
   position: relative;
   z-index: 2;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100svh;
   display: grid;
   grid-template-rows: minmax(0, 1fr) auto;
   place-items: center;
@@ -168,7 +168,7 @@ body.brunch-modal-open {
 
 /* ── SPINNER WRAPPER (rotates the whole table) ──────────────────────── */
 .brunchTableSpinner {
-  width: min(820px, 78vmin, calc(100vh - 188px));
+  width: min(760px, 72vw, calc(100svh - 232px));
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   cursor: grab;
@@ -177,6 +177,22 @@ body.brunch-modal-open {
   transition: filter 0.4s ease;
   touch-action: none;
   user-select: none;
+}
+
+@media (min-width: 769px) and (max-height: 760px) {
+  .brunchScene {
+    padding-top: 72px;
+  }
+
+  .brunchTableSpinner {
+    width: min(680px, 66vw, calc(100svh - 214px));
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .brunchTableSpinner {
+    width: min(700px, 70vw, calc(100svh - 226px));
+  }
 }
 
 .brunchTableSpinner:active {

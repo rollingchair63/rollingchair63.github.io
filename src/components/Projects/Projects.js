@@ -25,7 +25,10 @@ const PROJECTS = [
     subtitle: 'Event decoration visualisation mobile app',
     description: 'Built a mobile app using Expo to help users visualise decorations in their own spaces.',
     year: '2026',
-    images: [],
+    images: [
+      '/img/project2-1.webp',
+      '/img/project2-2.webp',
+    ],
     stack: [
       { label: 'Frontend', pills: ['React Native', 'Expo'] },
       { label: 'Backend', pills: ['JavaScript'] },

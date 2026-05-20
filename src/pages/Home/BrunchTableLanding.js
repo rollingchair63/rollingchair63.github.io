@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 const SOCIAL_DATA = [
   { label: 'GitHub',   href: 'https://github.com/rollingchair63',      kind: 'external', icon: '🛠' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/elodieyyx',  kind: 'external', icon: '💬' },
-  { label: 'Email me', href: 'mailto:hello@elodie.design',             kind: 'external', icon: '✉️' },
+  { label: 'Email me', href: 'mailto:elodieyeung@gmail.com',           kind: 'external', icon: '✉️' },
 ];
 
 const RESUME_PDF = process.env.PUBLIC_URL + '/assets/resume.pdf';
@@ -28,6 +28,7 @@ export default function BrunchTableLanding() {
   const rafRef       = useRef(null);
   const tableRef     = useRef(null);
   const scrollLockY  = useRef(0);
+  const pointerStart = useRef({ x: 0, y: 0 });
   const [tableAngle, setTableAngle] = useState(0);
 
   // ── UI state ────────────────────────────────────────────────────────
@@ -112,6 +113,7 @@ export default function BrunchTableLanding() {
     if (activeKey) return;
     isDragging.current = true;
     hasMoved.current   = false;
+    pointerStart.current = { x: e.clientX, y: e.clientY };
     lastAngle.current  = getPointerAngle(e);
     lastTime.current   = performance.now();
     velRef.current     = 0;
@@ -125,7 +127,9 @@ export default function BrunchTableLanding() {
     let delta = current - lastAngle.current;
     if (delta >  180) delta -= 360;
     if (delta < -180) delta += 360;
-    if (Math.abs(delta) > 1.5) hasMoved.current = true;
+    const dx = e.clientX - pointerStart.current.x;
+    const dy = e.clientY - pointerStart.current.y;
+    if (Math.hypot(dx, dy) > 8) hasMoved.current = true;
     angleRef.current += delta;
     const dtMs = now - lastTime.current;
     if (dtMs > 0) velRef.current = delta / (dtMs / 16.67);
@@ -260,11 +264,16 @@ export default function BrunchTableLanding() {
                   key={item.key}
                   type="button"
                   className={`brunchDish brunchDish--${item.key}${activeKey === item.key ? ' isActive' : ''}`}
-                  onClick={() => {
-                    if (hasMoved.current) {
+                  onPointerDown={e => {
+                    if (e.target.closest('.brunchDishImg, .brunchDishFallback')) {
+                      e.stopPropagation();
                       hasMoved.current = false;
-                      return;
+                      isDragging.current = false;
+                      velRef.current = 0;
                     }
+                  }}
+                  onClick={e => {
+                    if (!e.target.closest('.brunchDishImg, .brunchDishFallback')) return;
                     handleDishClick(item);
                   }}
                   onPointerEnter={() => setCursorHover(true)}
